@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="../bower_components/angular/angular.min.js"></script>
+<body>
+
+<div ng-app = "myApp" ng-controller="myCtrl">
+    <h2 ng-click="changeName()">{{aName}}</h2>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope){
+        $scope.aName = "Orin Dorin";
+        $scope.changeName = function() {
+            $scope.aName = "Andy Bandy";
+        }
+    });
+</script>
+
+
+<p>Click on the header to run the "changeName" function.</p>
+
+<p>This example demonstrates how to use the controller to change model data.</p>
+
+</body>
+</html>

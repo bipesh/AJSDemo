@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../bower_components/angular/angular.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AJS Validation</title>
+
+    <style>
+        input.ng-invalid{
+            background-color: lightblue;
+        }
+    </style>
+
+</head>
+<body>
+
+<form ng-app="" name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+
+    <h1>Status</h1>
+    <br><b>Vaild: </b>{{myForm.myAddress.$valid}}
+    <br><b>Dirty: </b>{{myForm.myAddress.$dirty}}
+    <br><b>Touched: </b>{{myForm.myAddress.$touched}}
+    <br><b>Error: </b>{{myForm.myAddress.$error}}
+</form>
+
+</body>
+</html>

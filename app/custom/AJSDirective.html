@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="../bower_components/angular/angular.min.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>AJSDirective</title>
+</head>
+<body ng-app = "myApp" >
+
+    <b>Comment: </b>
+    <!-- directive: w3-test-directive -->
+
+
+    <script>
+        // App
+        var app = angular.module("myApp", []);
+        // Directive
+        app.directive("w3TestDirective", function() {
+            return {
+                restrict: "M",
+                replace: true,
+                template: "<h1>Made by a directive !</h1>>"
+            };
+        });
+    </script>
+
+    <br>
+    <b>Class: </b>
+    <div class="w3-test-directive"></div>
+    <b>Attribute: </b>
+    <span w3-test-directive ></span>
+    <br>
+    <b>Element: </b>
+    <w3-test-directive></w3-test-directive>
+    <br>
+
+</body>
+</html>
